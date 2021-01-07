@@ -30,6 +30,11 @@ function outputThis(event){
 let space = document.getElementById('output')
 let result = network.run(phrase)
 console.log(result)
+if(result == ""){
+    space.innerHTML = "The neural network could not process your order, thank you come again"
+}
+else{
 space.innerHTML=` ${phrase}: sounds like a ${result} sentence`
+}
 }
 
