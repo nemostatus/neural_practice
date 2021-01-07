@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() { 
     document.getElementById("classifier").innerHTML += 
-    `<form>
+    `<form onsubmit="outputThis(event)" >
     <label> Is this sentence talking about hardware or software? Enter it and find out</label>
-    <input type="text" id="textbox">
+    <input type="text" id="textbox" >
 
-    <input type="submit" id="textbox" value="submit">
+    <input type="submit"  value="submit" value="">
    
     </form>
     Sentence: I fixed the power supply.<br>
-     - Category: ${output}`
-   
+   `
+  
 });
 const network = new brain.recurrent.LSTM();
 const trainingData = dataset.map(item=>({
@@ -19,5 +19,14 @@ const trainingData = dataset.map(item=>({
 network.train(trainingData,{
     iterations:50
 })
-const output = network.run('I fixed the power supply.')
-console.log(`Category: ${output}`)
+
+
+
+function outputThis(event){
+    event.preventDefault()
+    console.log("this happened")
+    let phrase = document.getElementById("textbox").value
+let space = document.getElementById('output')
+space.innerHTML+=`${network.run(phrase)}`
+}
+
