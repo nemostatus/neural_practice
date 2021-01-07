@@ -1,8 +1,12 @@
 // const brain = require('brain.js')
 document.addEventListener("DOMContentLoaded", function() { 
     document.getElementById("data").innerHTML += `
-${a}
-${b} `
+    <ul>
+<li> [0,0,0], ${a} </li>
+<li>[0,1,0], ${b}</li>
+<li>[1,0,1], ${c}</li>
+<li>[0,0,1], ${d}</li>
+</ul> `
 });
 const net = new brain.NeuralNetwork({hiddenLayers :[3]});
 const data = [
@@ -15,5 +19,5 @@ net.train(data);
 // this is a method which takes in the data and trains the network
 let a = net.run([0,0,0]);
 let b = net.run([0,1,0]);
-console.log(net.run([1,0,1]));
-console.log(net.run([0,0,1]));
+let c =net.run([1,0,1]);
+let d =net.run([0,0,1]);
