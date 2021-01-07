@@ -30,6 +30,6 @@ function outputThis(event){
 let space = document.getElementById('output')
 let result = network.run(phrase)
 console.log(result)
-space.innerHTML=`${result}`
+space.innerHTML=` ${phrase}: sounds like a ${result} sentence`
 }
 
