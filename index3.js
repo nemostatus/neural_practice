@@ -27,14 +27,14 @@ function checkname(event){
     console.log("this happened too ")
     let namephrase = document.getElementById("namestextbox").value
     console.log(namephrase)
-let namespace = document.getElementById('popularnames')
+let namespace = document.getElementById('popularnameoutput')
 let nameresult = network.run(namephrase)
-console.log(result)
+console.log(nameresult)
 if(nameresult == ""){
-    space.innerHTML = "The neural network could not process your order, thank you come again"
+    namespace.innerHTML = "The neural network could not process your order, thank you come again"
 }
 else{
-namespace.innerHTML=` ${namephrase}: sounds like a ${nameresult} sentence`
+namespace.innerHTML=` ${namephrase}: sounds like a ${nameresult} baby name.`
 }
 }
 
