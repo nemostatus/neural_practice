@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("classifier").innerHTML += 
     `<form onsubmit="outputThis(event)" >
     <label> Is this sentence talking about hardware or software? Enter it and find out</label>
-    <input type="text" id="textbox" value="" >
+    <input type="text" id="textbox" value="" autocomplete = "off" >
 
     <input type="submit"  value="submit" >
    
