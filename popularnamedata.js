@@ -123,7 +123,7 @@ let unpopularnames = ["Armelle",
 "Uri",
 "Weylyn",
 "Zael",
-"Zuri",]
+"Zuri"]
 
 let popularobjects = popularnames.map(x => {
   return {"name": x,
@@ -135,4 +135,4 @@ let unpopularobjects = unpopularnames.map(x => {
   "type": "unpopular"}
   })
 
-  let babynameobjects = popularobjects.concat(unpopularobjects)
+  let babynameobjects = unpopularobjects.concat(popularobjects)
