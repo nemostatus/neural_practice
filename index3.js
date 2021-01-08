@@ -1,4 +1,4 @@
-ocument.addEventListener("DOMContentLoaded", function() { 
+document.addEventListener("DOMContentLoaded", function() { 
     document.getElementById("popularnames").innerHTML += 
     `<form onsubmit="checkname(event)" >
     <label> Is this baby name popular? Enter it and find out!</label>
@@ -12,11 +12,11 @@ ocument.addEventListener("DOMContentLoaded", function() {
   
 });
 const network = new brain.recurrent.LSTM();
-const trainingData = babynameobjects.map(item=>({
-    input: item.text,
-    output: item.category
+const persontrainingData = babynameobjects.map(person=>({
+    input: person.name,
+    output: person.type
 }))
-network.train(trainingData,{
+network.train(persontrainingData,{
     iterations:50
 })
 

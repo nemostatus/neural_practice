@@ -134,3 +134,5 @@ let unpopularobjects = unpopularnames.map(x => {
     return {"name": x,
   "type": "unpopular"}
   })
+
+  let babynameobjects = popularobjects.concat(unpopularobjects)
