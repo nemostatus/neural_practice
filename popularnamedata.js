@@ -124,3 +124,13 @@ let unpopularnames = ["Armelle",
 "Weylyn",
 "Zael",
 "Zuri",]
+
+let popularobjects = popularnames.map(x => {
+  return {"name": x,
+"type": "popular"}
+})
+
+let unpopularobjects = unpopularnames.map(x => {
+    return {"name": x,
+  "type": "unpopular"}
+  })
